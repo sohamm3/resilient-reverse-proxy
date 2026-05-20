@@ -1,0 +1,21 @@
+# Git
+.git
+.gitignore
+README.md
+LICENSE
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs / temp
+*.log
+*.tmp
+tmp/
+
+# Build artifacts
+bin/
+proxyServer
+testbackends
+resilient-reverse-proxy

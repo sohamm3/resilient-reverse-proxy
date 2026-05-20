@@ -1,0 +1,41 @@
+{
+    "server": {
+        "port": 8080,
+        "read_timeout": "10s",
+        "write_timeout": "30s"
+    },
+    "algorithm": "weighted-round-robin",
+    "backends": [
+        {
+            "url": "http://localhost:8081",
+            "weight": 5
+        },
+        {
+            "url": "http://localhost:8082",
+            "weight": 3
+        },
+        {
+            "url": "http://localhost:8083",
+            "weight": 2
+        }
+    ],
+    "health_check": {
+        "enabled": true,
+        "interval": "10s",
+        "timeout": "3s",
+        "path": "/health"
+    },
+    "rate_limit": {
+        "enabled": true,
+        "requests_per_second": 5,
+        "burst": 10
+    },
+    "logging": {
+        "format": "json",
+        "level": "info"
+    },
+    "retry": {
+        "enabled": true,
+        "max_attempts": 2
+    }
+}

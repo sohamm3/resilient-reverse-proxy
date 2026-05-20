@@ -1,0 +1,23 @@
+# Build artifacts
+bin/
+proxyServer
+testbackends
+resilient-reverse-proxy
+
+# Logs / temp
+*.log
+*.tmp
+tmp/
+
+# Environment
+.env
+
+# Editor / OS
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Go dependencies
+vendor/

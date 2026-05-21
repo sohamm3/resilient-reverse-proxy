@@ -98,6 +98,7 @@ func (p *Proxy) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		}
 
 		reverseProxy := httputil.NewSingleHostReverseProxy(target.URL)
+		reverseProxy.Director = nil
 
 		// Rewrite outbound upstream request headers.
 		reverseProxy.Rewrite = func(pr *httputil.ProxyRequest) {
